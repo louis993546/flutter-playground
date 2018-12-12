@@ -98,3 +98,31 @@ class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => new RandomWordsState();
 }
+
+//TODO just make a very generalize models that's based on just git itself
+
+class Repository {
+  int id;
+  String name;
+  String description;
+  DateTime createdAt;
+  int forkCount;
+  Language primaryLanguage;
+}
+
+class Language {
+  String name;
+  String colorHex;
+}
+
+class Branch {}
+
+class Tag {
+  TagType tagType;
+}
+
+class Commit {}
+
+//enum Host { GITHUB_COM, GITLAB_COM }
+
+enum TagType { LIGHTWEIGHT, ANNOTATED }
